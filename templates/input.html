@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="#90ee90">
+<form action="./reg" method="post">
+    <center>
+{% csrf_token %}
+    Enter First Name:<input type="text" name="t1"><br>
+    Enter Last Name:<input type="text" name="t2"><br>
+    Enter User Name:<input type="text" name="t3"><br>
+    Enter Password:<input type="password" name="t4"><br>
+    Enter Cpassword:<input type="password" name="t5"><br>
+    Enter Emailid:<input type="email" name="t6"><br>
+    Enter MobileNumber:<input type="text" name="t7"><br>
+    <input type="submit" value="register">
+    </center>
+</form>
+</body>
+</html>
