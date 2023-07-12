@@ -5,6 +5,9 @@ from .models import Reg
 # Create your views here.
 class Home(View):
     def get(self,request):
+        return render(request,'home.html')
+class RegInput(View):
+    def get(self,request):
         return render(request,'input.html')
 class RegView(View):
     def post(self,request):
@@ -19,3 +22,15 @@ class RegView(View):
         r1.save()
         res=HttpResponse("reg success")
         return res
+class LoginInput(View):
+    def get(self,request):
+        return render(request,'logininput.html')
+class Login(View):
+    def post(self,request):
+        user=request.POST["un"]
+        pwd=request.POST["pw"]
+        objs=Reg.objects.filter(username=user,password=pwd)
+        if objs:
+            return HttpResponse("login success")
+        else:
+            return HttpResponse("login failed")

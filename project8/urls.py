@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from regapp.views import Home,RegView
+from regapp.views import Home,RegView,LoginInput,Login,RegInput
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('lokeshit',Home.as_view()),
-    path('reg',RegView.as_view())
+    path('reginput',RegInput.as_view()),
+    path('reg',RegView.as_view()),
+    path('logininput',LoginInput.as_view()),
+    path('login',Login.as_view()),
 ]
