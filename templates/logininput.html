@@ -8,8 +8,7 @@
 <center>
 <form action="./login" method="post">
     {% csrf_token %}
-    Enter User Name:<input type="text" name="un"><br>
-    Enter Password:<input type="password" name="pw"><br>
+    {{ loginform }}
     <input type="submit" value="login">
 </form>
 </center>
